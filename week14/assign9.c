@@ -11,7 +11,7 @@ int main() {
 
     printf("I am the Parent, my PID: %d\n", getpid());
 
-    for (i = 0; i < 6; i++) {
+    for (i = 0; i < 5; i++) {
         child_pid = fork();
 
         if (child_pid == -1) {
@@ -25,7 +25,7 @@ int main() {
         }
     }
 
-    for (i = 0; i < 6; i++) {
+    for (i = 0; i < 5; i++) {
         child_pid = wait(&status);
         if (child_pid == -1) {
             perror("wait() failed");
